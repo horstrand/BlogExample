@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>This is the title</title>
-	<div style="border: 2px solid #000;">
-		<h1>This is the Header</h1>
-	</div>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	{% include 'snippets/header.html' %}
+
 </head>
 <body>
-	{% block content %}
 
-	{% endblock content %}
+	<!-- Body -->
+	
+	<style type="text/css">
+		.main{
+			min-height: 100vh;
+			height: 100%
+		}
+	</style>
+	<div class="main">
+		{% block content %}
+
+		{% endblock content %}
+	</div>
+	<!-- End Body -->
+
+	{% include 'snippets/footer.html' %}
 </body>
 
-<footer>
-	<div style="border: 2px solid #000;">
-		<h2>This is the Header</h2>
-	</div>
-</footer>
+
 </html>
